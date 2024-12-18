@@ -1,9 +1,20 @@
 import readlinesync = require("readline-sync");
 import { colors } from "./src/util/Colors";
+import { Livro } from "./src/util/model/Livro";
+import { LivroDigital } from "./src/util/model/LivroDigital";
+
 
 export function main() {
 
-    let opcao
+    let opcao, id, anoPublicacao: number;
+    let nome, genero, autor: string;
+
+    const tipoLivros = ['Livro', 'LivroDigital']
+    const livro: Livro = new Livro(1, "Orgulho e Preconceito", 1 , "Jane Austen", 1813, 25)
+    livro.visualizar();
+
+    const livroDigital: LivroDigital = new LivroDigital(1, "1984", 3, "George Orwell", 1949, 2, "1,87 MB")
+    livroDigital.visualizar();
 
     while (true) {
 
@@ -35,7 +46,7 @@ export function main() {
         switch (opcao) {
             case 1:
                 console.log("\n\nAdicionar Livro\n\n");
-                
+
                 break;
             keyPress()
             case 2:
