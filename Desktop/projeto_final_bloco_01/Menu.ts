@@ -42,6 +42,7 @@ export function main() {
         console.log("                                                     ");
         console.log("*****************************************************");
         console.log("                                                     ");
+        console.log("                                                     ");
 
         console.log("Entre com a opção desejada: ");
         opcao = readlinesync.questionInt("");
