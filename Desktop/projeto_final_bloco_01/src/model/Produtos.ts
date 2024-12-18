@@ -1,3 +1,5 @@
+import { Livro } from "./Livro";
+
 export abstract class Produtos{
 
     private _id: number;
@@ -54,21 +56,20 @@ export abstract class Produtos{
 		this._anoPublicacao = value;
 	}
 
+
     public visualizar() {
 
         let tipo: string = " "
         switch (this._tipo){
             case 1:
-                tipo = "Romance";
+                tipo = "Físico";
                 break;
             case 2:
-                tipo = "Terror";
+                tipo = "Digital";
                 break;
-            case 3:
-                tipo = "Ficção Científica";
-                break;
+
             default:
-                console.log("Categoria não encontrada");
+                console.log("Tipo Invalido!");
         }
     
         console.log("\n\n*****************************************************");
@@ -76,7 +77,7 @@ export abstract class Produtos{
         console.log("*****************************************************");
         console.log("ID do Livro: " + this._id);
         console.log("Nome do Livro: " + this._nome);
-        console.log("Genero: " + tipo);
+        console.log("Formato: " + tipo);
         console.log("Autor: " + this.autor);
         console.log("Ano de Publicacão: " + this._anoPublicacao);
         
